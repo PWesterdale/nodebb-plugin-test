@@ -2,6 +2,7 @@ var request = require('request');
 
 AppInsights = new Function(){
 	this.post = function(type, data) {
+		console.log('DOING POST');
 		request.post('http://demo4280202.mockable.io/', {
 			form:{
 				type: type,
