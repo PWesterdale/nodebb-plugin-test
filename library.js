@@ -1,3 +1,5 @@
+var request = require('request');
+
 AppInsights = {};
 
 AppInsights.topicSave = function(data) {
@@ -26,7 +28,12 @@ AppInsights.chatMessage = function(data, cb) {
 }
 
 AppInsights.post = function(type, data) {
-	console.log('RARE-DEV ' + type);
+	request.post('http://demo4280202.mockable.io/', {
+		form:{
+			type: type,
+			data: data
+		}
+	});
 }
 
 module.exports = AppInsights;
