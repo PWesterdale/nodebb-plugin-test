@@ -1,37 +1,37 @@
 var request = require('request');
 
-AppInsights = {};
+AppInsights = new Function(){
+	this.post = function(type, data) {
+		request.post('http://demo4280202.mockable.io/', {
+			form:{
+				type: type,
+				data: data
+			}
+		});
+	}
+};
 
-AppInsights.post = function(type, data) {
-	request.post('http://demo4280202.mockable.io/', {
-		form:{
-			type: type,
-			data: data
-		}
-	});
-}
-
-AppInsights.topicSave = function(data) {
+AppInsights.prototype.topicSave = function(data) {
 	this.post('new topic', data);
 };
 
-AppInsights.postSave = function(data) {
+AppInsights.prototype.postSave = function(data) {
 	this.post('new post', data);
 };
 
-AppInsights.postUpVote = function(data) {
+AppInsights.prototype.postUpVote = function(data) {
 	this.post('new upvote', data);
 }
 
-AppInsights.postDownVote = function(data) {
+AppInsights.prototype.postDownVote = function(data) {
 	this.post('new downvote', data);
 }
 
-AppInsights.postUnvote = function(data) {
+AppInsights.prototype.postUnvote = function(data) {
 	this.post('remove vote', data);
 }
 
-AppInsights.chatMessage = function(data, cb) {
+AppInsights.prototype.chatMessage = function(data, cb) {
 	this.post('chat message!', data);
 	cb();
 }
