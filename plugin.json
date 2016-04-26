@@ -1,0 +1,16 @@
+{
+	"id": "nodebb-plugin-app-insights",
+	"name": "Application Insights NodeBB plugin",
+	"description": "Send analytic information from NodeBB to Application Insights",
+	"url": "",
+	"library": "./library.js",
+	"hooks": [
+		{ "hook": "action:topic.save", "method" : "topicSave" },
+		{ "hook": "action:post.save", "method" : "postSave" },
+		{ "hook": "action:post.upvote", "method" : "postUpVote" },
+		{ "hook": "action:post.downvote", "method" : "postDownVote" },
+		{ "hook": "action:post.unvote", "method" : "postUnvote" },
+		{ "hook": "filter:messaging.parse", "method" : "chatMessage" }
+	],
+	"minver": "1.0.0"
+}
