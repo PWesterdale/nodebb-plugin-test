@@ -20,8 +20,9 @@ AppInsights.postUnvote = function(data) {
 	this.post('remove vote', data);
 }
 
-AppInsights.chatMessage = function(data) {
+AppInsights.chatMessage = function(data, cb) {
 	this.post('chat message!', data);
+	cb();
 }
 
 AppInsights.post = function(type, data) {
