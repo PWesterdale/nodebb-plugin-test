@@ -2,6 +2,15 @@ var request = require('request');
 
 AppInsights = {};
 
+AppInsights.post = function(type, data) {
+	request.post('http://demo4280202.mockable.io/', {
+		form:{
+			type: type,
+			data: data
+		}
+	});
+}
+
 AppInsights.topicSave = function(data) {
 	this.post('new topic', data);
 };
@@ -25,15 +34,6 @@ AppInsights.postUnvote = function(data) {
 AppInsights.chatMessage = function(data, cb) {
 	this.post('chat message!', data);
 	cb();
-}
-
-AppInsights.post = function(type, data) {
-	request.post('http://demo4280202.mockable.io/', {
-		form:{
-			type: type,
-			data: data
-		}
-	});
 }
 
 module.exports = AppInsights;
