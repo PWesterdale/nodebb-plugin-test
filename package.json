@@ -1,0 +1,19 @@
+{
+  "name": "nodebb-plugin-app-insights",
+  "version": "1.0.0",
+  "description": "",
+  "main": "library.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PWesterdale/nodebb-plugin-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PWesterdale/nodebb-plugin-test/issues"
+  },
+  "homepage": "https://github.com/PWesterdale/nodebb-plugin-test#readme"
+}
