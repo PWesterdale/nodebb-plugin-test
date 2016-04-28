@@ -3,6 +3,7 @@ var request = require('request');
 AppInsights = {};
 
 AppInsights.post = function(type, data) {
+	console.log('Writing ' + type);
 	request({
     	url: 'http://demo4280202.mockable.io/test',
     	method: "POST",
