@@ -35,7 +35,7 @@ AppInsights.postUnvote = function(data) {
 
 AppInsights.chatMessage = function(data, cb) {
 	instance.post('chat message!', data);
-	cb();
+	cb(null, data);
 };
 
 var instance = AppInsights;
