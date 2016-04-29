@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/PWesterdale/nodebb-plugin-test#readme",
   "dependencies": {
+    "applicationinsights": "^0.15.14",
     "request": "^2.72.0"
   }
 }
