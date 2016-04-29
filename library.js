@@ -1,9 +1,18 @@
 var request = require('request');
+var appInsights = require('applicationinsights');
+
+var meta = require('./meta');
+var settings;
+
+meta.settings.get('applicationInsights', function(err, config){
+	settings = config;
+	console.log(settings);
+});
 
 AppInsights = {};
 
 AppInsights.post = function(type, data) {
-	console.log('Writing ' + type);
+	console.log(settings);
 	request({
     	url: 'http://demo4280202.mockable.io/test',
     	method: "POST",
