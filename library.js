@@ -1,3 +1,4 @@
+
 var appInsights = require('applicationinsights'),
 	config = require.main.require('./config.json'),
 	category = module.parent.require('./categories'),
